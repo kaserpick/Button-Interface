@@ -3,47 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky Chart</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      text-align: center;
-    }
-    .fixed-chart {
-      position: fixed;
-      top: -40px; /* Distance from the top of the screen */
-      left: 0;
-      width: 100%;
-      background-color: white; /* Optional: Set a background to avoid overlay issues */
-      z-index: 1000; /* Ensures it stays on top of other content */
-      padding: 10px; /* Optional: Add padding for better spacing */
-      border-bottom: 1px solid #ddd; /* Optional: Add a separator */
+    .scaled-embed {
+      transform: scale(0.8); /* Scale down to 80% of the original size */
+      transform-origin: top left; /* Ensure scaling starts from the top-left */
+      width: 125%; /* Adjust width to account for the scaled content */
+      height: 1200px; /* Adjust height to fit the content */
+      overflow: hidden; /* Hide any overflowing parts */
     }
     iframe {
-      width: 100%;
-      border: none;
-    }
-    .content {
-      padding-top: 650px;
+      width: 100%; /* Ensure iframe uses full container width */
+      height: 100%; /* Ensure iframe uses full container height */
+      border: none; /* Remove default border */
     }
   </style>
 </head>
 <body>
 
-  <div class="fixed-chart">
+  <div class="scaled-embed">
     <iframe 
-      src="https://view.monday.com/8139051903-208353474fee4b0c5388efa0b2c5d5ca?r=use1" 
-      height="600">
+      src="https://view.monday.com/8139051903-01d91769a6040bb9b22b713e2de32f09?r=use1" 
+      allowfullscreen>
     </iframe>
   </div>
 
-  <div class="content">
-    <iframe 
-      src="https://view.monday.com/8139051903-01d91769a6040bb9b22b713e2de32f09?r=use1" 
-      height="900">
-    </iframe>
-  </div>
 </body>
 </html>
